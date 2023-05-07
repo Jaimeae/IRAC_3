@@ -19,3 +19,4 @@ EOF
 wget https://www.bok.net/Bento4/binaries/Bento4-SDK-1-6-0-639.x86_64-unknown-linux.zip
 unzip Bento4-SDK-1-6-0-639.x86_64-unknown-linux.zip
 sudo service apache2 start
+sudo mv /IRAC_3 /var/www/html/
