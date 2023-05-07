@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install -y mysql-server wget apache2 php php-mysqli
+sudo apt install -y mysql-server wget apache2 php php-mysqli unzip
 sudo mv 20-mysqli.ini /etc/php/8.1/apache2/conf.d/
 sudo service mysql start
 sudo rm -r /var/www/html/*
