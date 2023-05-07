@@ -103,17 +103,13 @@ resource "aws_instance" "IRAC" {
    }
    //codigo que se ejecutara nada mas crear la instancia
    //para descargarnos las dependencias necesarias
-        user_data = <<-EOF
-        sudo apt update
-        sudo apt install mysql-server wget git apache2 php php-mysqli -y
-        sudo mv 20-mysqli.ini /etc/php/8.1/apache2/conf.d/
-        sudo service mysql start
-        sudo rm -r /var/www/html/*
-        wget https://www.bok.net/Bento4/binaries/Bento4-SDK-1-6-0-639.x86_64-unknown-linux.zip
-        unzip Bento4-SDK-1-6-0-639.x86_64-unknown-linux.zip
-        git clone https://github.com/Jaime-am/IRAC_3
-        chmod +x IRAC_3/setup.sh && bash IRAC_3/setup.sh
-        EOF
+    user_data = <<-EOF
+    #!/bin/bash
+    sudo apt update
+    sudo apt install git -y
+    git clone https://github.com/Jaime-am/IRAC_3
+    chmod +x IRAC_3/setup.sh && bash IRAC_3/setup.sh
+    EOF
 
     tags = {
         name = "EC2_IRAC"
