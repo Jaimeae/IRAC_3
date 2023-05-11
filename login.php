@@ -34,7 +34,7 @@ $nr = 0;
 //En caso de login exitoso
 if($nr == 1)
 {
-    setcookie("decoder", $user_login, time()+3600, "/"); // suponiendo que el nombre de la cookie es "key" y se establece por una hora, es la clave del usuario
+    setcookie("decoder", $user_login, time()+3600, "/"); // suponiendo que el nombre de la cookie es "decoder" y se establece por una hora, es la clave del usuario
 	header("Location: index.html");
 	
 }
