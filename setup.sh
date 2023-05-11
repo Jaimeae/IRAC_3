@@ -23,3 +23,4 @@ sudo echo "<IfModule mod_dir.c>
         DirectoryIndex login.html login.php
 </IfModule>" > /etc/apache2/mods-enabled/dir.conf
 sudo service apache2 start
+sudo systemctl restart apache2
