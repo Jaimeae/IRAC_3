@@ -7,13 +7,13 @@ variable "region" {
 variable "access_key" {
   description = "Access Key de la cuenta AWS"
   type        = string
-  default     = "AKIATWNOVUNGLTAAF2VO"
+  default     = "XXX"
 }
 
 variable "secret_key" {
   description = "Secret Key de la cuenta AWS"
   type        = string
-  default     = "8ZA5GrzMVEQWf2j7/5dkQSSyLdLFvMKdu73tX4pI" 
+  default     = "XXX" 
 }
 
 variable "ami" {
