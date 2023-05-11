@@ -18,7 +18,7 @@ if (!$conn)
 //Cargamos variables del form del login para realizar las consultas a la BD
 $user_login = $_POST["user_login"];
 $pass_login = $_POST["password_login"];
-$key        = $_POST["key"];
+$decoder        = $_POST["decoder"];
 
 //Realizamos consultas a la BD
 if ($user_login != null && $pass_login != null) {
@@ -34,7 +34,7 @@ $nr = 0;
 //En caso de login exitoso
 if($nr == 1)
 {
-    setcookie("key", $user_login, time()+3600, "/"); // suponiendo que el nombre de la cookie es "key" y se establece por una hora, es la clave del usuario
+    setcookie("decoder", $user_login, time()+3600, "/"); // suponiendo que el nombre de la cookie es "key" y se establece por una hora, es la clave del usuario
 	header("Location: index.html");
 	
 }
@@ -44,6 +44,4 @@ else if ($nr == 0)
 	header("Location: login.html");
 }
 	
-
-
 ?>
