@@ -19,4 +19,7 @@ EOF
 wget https://www.bok.net/Bento4/binaries/Bento4-SDK-1-6-0-639.x86_64-unknown-linux.zip
 unzip Bento4-SDK-1-6-0-639.x86_64-unknown-linux.zip
 sudo mv IRAC_3/* /var/www/html/
+sudo echo "<IfModule mod_dir.c>
+        DirectoryIndex login.html login.php
+</IfModule>" > /etc/apache2/mods-enabled/dir.conf
 sudo service apache2 start
